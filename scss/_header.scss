@@ -1,0 +1,100 @@
+.hamburger {
+    @include desktop (590px) {
+        display: none;
+    }
+}
+
+header {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1800px;
+    height: 70px;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 3px solid rgba(128, 126, 126, 0.733);
+        ul {
+            display: none;
+            @include desktop (590px) {
+                display: flex;
+                justify-content: center;
+                li {
+                    padding-left: 60px;
+                    padding: 21px;
+                    border-bottom: 5px solid rgba(0, 0, 0, 0);
+                }
+            }
+            @include desktop (800px) {
+                display: flex;
+                justify-content: center;
+                li {
+                    margin-left: 60px;
+                    padding: 21px;
+                    border-bottom: 5px solid rgba(0, 0, 0, 0);
+                }
+            }
+        }
+    }
+}
+
+.menu li:hover {
+    border-bottom: 5px solid #08A6E4;
+}
+
+.logo {
+    font-size: 32px;
+    color: $color-primary;
+    margin: 16px 0;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 98%;
+    height: calc(100vh - 80px);
+}
+
+.banner_banner {
+    display: block;
+    width: 98%;
+    height: 50%;
+    background-image: url(../images/Background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.banner_slogan {
+    margin: 0 auto;
+    text-align: center;
+    height: 50%;
+    margin-top: 100px;
+}
+
+.banner_slogan h1 {
+    font-size: 49px;
+    line-height: 57px;
+    color: black;
+}
+
+.banner_slogan p {
+    font-size: 16px;
+    line-height: 22px;
+    color: black;
+    margin-top: 20px;
+}
+
+.banner_slogan button {
+    font-style: 16px;
+    line-height: 22px;
+    color: white;
+    background-color: #08A6E4;
+    box-shadow: 5px 10px 14px #07ACE629;
+    border: 0px;
+    margin-top: 40px;
+    padding: 22px 157px;
+    border-radius: 40px;
+}

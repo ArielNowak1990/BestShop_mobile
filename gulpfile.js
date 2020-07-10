@@ -21,8 +21,8 @@ function watcher(done) {
         server: "./"
     });
 
-    gulp.watch("/scss/**/*.scss", gulp.series(compileSass, reload));
-    gulp.watch("/*.html", gulp.series(reload));
+    gulp.watch("./scss/**/*.scss", gulp.series(compileSass, reload));
+    gulp.watch("./*.html", gulp.series(reload));
 
     done();
 }
