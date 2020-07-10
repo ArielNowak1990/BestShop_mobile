@@ -1,2 +1,2 @@
-# BestShop_mobile
-Best Shop mobile
+# CL_Workshop_2
+Homework, BestShop
