@@ -568,24 +568,11 @@ h2 {
 .form_agree input:checked+p::before {
     border: 2px solid #07ACE6;
     background-color: #07ACE6;
-    background-image: url(../images/Icon\ Check.svg);
+    background-image: url(../images/Icon/Check.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-/* 
-
-.form input:checked+p::before {
-    background-image: url(../images/Icon\ Check.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: green;
-    background-color: rgba(0, 128, 0, 0.342);
-    border: 2px solid green;
-} */
 
 .contact_leftside h2 {
     font-weight: 49px;
