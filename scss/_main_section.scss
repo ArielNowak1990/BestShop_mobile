@@ -95,170 +95,236 @@ h2 {
     text-align: center;
 }
 
-// TERAZ BEDZIE ADVANTAGES
 .advantages {
-    background-color: #F7F7F7;
+    max-width: 1500px;
     margin: 0 auto;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
+    background-color: #F7F7F7;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .advantages_boxes {
-    width: 90%;
     margin: 0 auto;
+    width: 80%;
     margin-top: 105px;
     margin-bottom: 105px;
-    z-index: 1;
+    .box {
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 37px;
+        background-color: #FFFFFF;
+        .box_leftSide {
+            width: 100%;
+            text-align: left;
+            vertical-align: middle;
+            @include desktop(1200px) {
+                width: 50%;
+                text-align: left;
+                vertical-align: middle;
+            }
+        }
+        .box_rightSide {
+            width: 100%;
+            text-align: left;
+            vertical-align: middle;
+            @include desktop(1200px) {
+                width: 50%;
+                text-align: left;
+                vertical-align: middle;
+            }
+        }
+        @include desktop(1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+    .box:nth-of-type(2) {
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 37px;
+        background-color: #FFFFFF;
+        .box_leftSide {
+            width: 100%;
+            text-align: left;
+            vertical-align: middle;
+            @include desktop(1200px) {
+                width: 50%;
+                text-align: left;
+                vertical-align: middle;
+            }
+        }
+        .box_rightSide {
+            width: 100%;
+            text-align: left;
+            vertical-align: middle;
+            @include desktop(1200px) {
+                width: 50%;
+                text-align: left;
+                vertical-align: middle;
+            }
+        }
+        @include desktop(1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
 }
 
-.advantages_boxes .box {
-    width: 90%;
+.advantages .box:nth-of-type(3) {
+    background-color: #F7F7F7;
+    .box_rightSide {
+        align-self: stretch;
+        .holder {
+            align-self: stretch;
+        }
+    }
+}
+
+.advantages .box img {
+    max-width: 70%;
     z-index: 1;
-    margin-bottom: 37px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.before__mac,
+.before__iphone,
+.trumpet {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
-    border: 1px solid #E8E9ED;
-    border-radius: 5px;
-}
-
-.advantages_boxes .box:last-of-type {
-    width: 90%;
-    z-index: 1;
-    margin-bottom: 37px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #F7F7F7;
-    border: 0px solid #E8E9ED;
-}
-
-.advantages_boxes .box div {
-    width: 45%;
-}
-
-.box_rightSide,
-.box_leftSide {
-    position: relative;
-}
-
-.box_rightSide img,
-.box_leftSide img {
-    position: relative;
-    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
 }
 
 .before__mac::before {
     content: " ";
     display: block;
-    height: 219px;
-    width: 250px;
+    height: 70%;
+    width: 40%;
     background-color: #FB3B64;
     border-radius: 25px;
     position: absolute;
-    right: 100px;
-    transform: rotate(45deg);
+    right: 50px;
+    transform: rotate(-45deg);
     z-index: 0;
 }
 
 .before__iphone::before {
     content: " ";
     display: block;
-    height: 309px;
-    width: 250px;
+    width: 70%;
+    height: 90%;
     background-color: #07ACE6;
-    border-radius: 45%;
+    border-radius: 50%;
     position: absolute;
-    right: 180px;
-    transform: rotate(45deg);
     z-index: 0;
 }
 
-.advantages_boxes .box:first-of-type img {
-    height: 219px;
-    margin: 0 auto;
-}
-
-.advantages_boxes .box:nth-child(2) img {
-    height: 350px;
+.holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .advantages_boxes .box:nth-child(3)>div:first-of-type {
     background-color: #FFFFFF;
     display: block;
-    height: 370px;
-    width: 620px;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 60px;
     border: 1px solid #E8E9ED;
-    padding: 30px
+    padding: 17px;
+    @include desktop (1200px) {
+        margin-right: 5%;
+        width: 45%;
+    }
 }
 
 .advantages_boxes .box:nth-child(3)>div:nth-child(2) {
     background-color: #55DFB4;
     display: block;
-    height: 370px;
-    width: 440px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.advantages_boxes .box:nth-child(3)>div:nth-child(2) img {
-    height: 207px;
+    margin: 0 auto;
+    @include desktop (1200px) {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
 
 .advantages_boxes .box h3 {
     font-size: 36px;
+    padding-left: 33px;
     margin-bottom: 30px;
-    width: 330px;
+    width: 80%
 }
 
 .advantages_boxes p {
-    width: 416px;
+    width: 80%;
+    padding: 33px;
     padding-bottom: 100px;
 }
 
-.advantages_boxes>p:first-of-type::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 300px;
-    background-color: red;
-    position: relative;
-    bottom: -55px;
-}
-
-.advantages_boxes>p:nth-of-type(n)::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 300px;
-    background-color: blue;
-    position: relative;
-    bottom: -55px;
-}
-
-.advantages_boxes>p:last-of-type::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 300px;
-    background-color: green;
-    position: relative;
-    bottom: -55px;
-}
-
+// .advantages_boxes>p:first-of-type::after {
+//     content: "";
+//     display: block;
+//     height: 2px;
+//     width: 300px;
+//     background-color: red;
+//     position: relative;
+//     bottom: -55px;
+// }
+// .advantages_boxes>p:nth-of-type(2)::after {
+//     content: "";
+//     display: block;
+//     height: 2px;
+//     width: 300px;
+//     background-color: blue;
+//     position: relative;
+//     bottom: -55px;
+// }
+// .advantages_boxes>p:last-of-type::after {
+//     content: "";
+//     display: block;
+//     height: 2px;
+//     width: 300px;
+//     background-color: green;
+//     position: relative;
+//     bottom: -55px;
+// }
 .advantages_boxes .box:first-of-type .box_leftSide::after {
     content: "";
     display: block;
     height: 3px;
-    width: 300px;
+    width: 60%;
+    margin-left: 20%;
     background-color: #FB3B64;
 }
 
@@ -266,7 +332,8 @@ h2 {
     content: "";
     display: block;
     height: 3px;
-    width: 300px;
+    width: 60%;
+    margin-left: 20%;
     background-color: #07ACE6;
 }
 
@@ -274,173 +341,273 @@ h2 {
     content: "";
     display: block;
     height: 3px;
-    width: 300px;
+    width: 60%;
+    margin-left: 20%;
     background-color: #55DFB4;
 }
 
-// TERAZ BEDZIE ADVANTAGES na desktop
-@include desktop (1050px) {
-    .advantages {
-        background-color: #F7F7F7;
-        margin: 0 auto;
-        height: 90%;
-        display: flex;
+// OPTION PRICE
+.pricing {
+    margin: 0 auto;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.pricing_option {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width: 750px) {
         flex-direction: column;
     }
-    .advantages_boxes {
-        height: 1190px;
+}
+
+.pricing_option .option {
+    text-align: center;
+    border: 1px solid #FB3B64;
+    border-radius: 18px;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    @media (max-width: 750px) {
+        margin-bottom: 40px;
+        width: 70%;
+    }
+}
+
+.pricing_option .option h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 34px;
+    margin-bottom: 24px;
+}
+
+.pricing_option .option li {
+    font-size: 14px;
+    line-height: 34px;
+}
+
+.option span:nth-of-type(2) {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 61px;
+    margin-top: 15px;
+}
+
+.option span:first-of-type {
+    font-size: 46px;
+    color: #FB3B64;
+}
+
+.option button {
+    padding: 16px 57px;
+    background-color: #FB3B64;
+    color: white;
+    border-radius: 23px;
+    border: 0px;
+    position: relative;
+    bottom: -25px;
+}
+
+.pricing_option .option:nth-of-type(2) {
+    border: 1px solid #07ACE6;
+    width: 35%;
+    height: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 5px 10px 27px #07ACE629;
+    @media (max-width: 750px) {
+        margin-bottom: 40px;
         width: 90%;
-        margin: 0 auto;
-        margin-top: 105px;
-        margin-bottom: 105px;
-        z-index: 1;
     }
-    .advantages_boxes .box {
-        height: 370px;
-        width: 90%;
-        z-index: 1;
-        margin-bottom: 37px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #FFFFFF;
-        border: 1px solid #E8E9ED;
-        border-radius: 5px;
+}
+
+.option:nth-of-type(2) span:first-of-type {
+    font-size: 46px;
+    color: #07ACE6;
+}
+
+.option:nth-of-type(2) button {
+    padding: 16px 57px;
+    background-color: #07ACE6;
+    color: white;
+    border-radius: 23px;
+    border: 0px;
+    position: relative;
+    bottom: -55px;
+}
+
+.pricing_option .option:nth-of-type(3) {
+    border: 1px solid #55DFB4;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    @media (max-width: 750px) {
+        margin-bottom: 40px;
+        width: 70%;
     }
-    .advantages_boxes .box:last-of-type {
-        height: 370px;
-        width: 90%;
-        z-index: 1;
-        margin-bottom: 37px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #F7F7F7;
-        border: 0px solid #E8E9ED;
-    }
-    .advantages_boxes .box div {
-        width: 45%;
-    }
-    .box_rightSide,
-    .box_leftSide {
-        position: relative;
-    }
-    .box_rightSide img,
-    .box_leftSide img {
-        position: relative;
-        z-index: 1;
-    }
-    .before__mac::before {
-        content: " ";
-        display: block;
-        height: 219px;
-        width: 250px;
-        background-color: #FB3B64;
-        border-radius: 25px;
-        position: absolute;
-        right: 100px;
-        transform: rotate(45deg);
-        z-index: 0;
-    }
-    .before__iphone::before {
-        content: " ";
-        display: block;
-        height: 309px;
-        width: 250px;
-        background-color: #07ACE6;
-        border-radius: 45%;
-        position: absolute;
-        right: 180px;
-        transform: rotate(45deg);
-        z-index: 0;
-    }
-    .advantages_boxes .box:first-of-type img {
-        height: 219px;
-        margin: 0 auto;
-    }
-    .advantages_boxes .box:nth-child(2) img {
-        height: 350px;
-    }
-    .advantages_boxes .box:nth-child(3)>div:first-of-type {
-        background-color: #FFFFFF;
-        display: block;
-        height: 370px;
-        width: 620px;
-        display: flex;
+}
+
+.option:nth-of-type(3) span:first-of-type {
+    font-size: 46px;
+    color: #55DFB4;
+}
+
+.option:nth-of-type(3) button {
+    padding: 16px 57px;
+    background-color: #55DFB4;
+    color: white;
+    border-radius: 23px;
+    border: 0px;
+    position: relative;
+    bottom: -27px;
+}
+
+//  formularz
+.contact {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    height: 336px;
+    margin-bottom: 60px;
+    @media (max-width: 700px) {
         flex-direction: column;
-        justify-content: center;
-        margin-right: 60px;
-        border: 1px solid #E8E9ED;
-        padding: 30px
+        margin-bottom: 140px;
     }
-    .advantages_boxes .box:nth-child(3)>div:nth-child(2) {
-        background-color: #55DFB4;
-        display: block;
-        height: 370px;
-        width: 440px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media (max-width: 500px) {
+        flex-direction: column;
+        margin-bottom: 160px;
     }
-    .advantages_boxes .box:nth-child(3)>div:nth-child(2) img {
-        height: 207px;
+}
+
+.contact input {
+    font-size: 16px;
+}
+
+.contact_leftside {
+    width: 45%;
+    position: relative;
+    margin-right: 50px;
+    @media (max-width: 700px) {
+        margin-bottom: 40px;
+        width: 90%;
+        padding-left: 20%;
     }
-    .advantages_boxes .box h3 {
-        font-size: 36px;
-        margin-bottom: 30px;
-        width: 330px;
+}
+
+.contact_rightside {
+    width: 45%;
+    position: relative;
+    @media (max-width: 700px) {
+        width: 90%;
     }
-    .advantages_boxes p {
-        width: 416px;
-        padding-bottom: 100px;
-    }
-    .advantages_boxes>p:first-of-type::after {
-        content: "";
-        display: block;
-        height: 2px;
-        width: 300px;
-        background-color: red;
-        position: relative;
-        bottom: -55px;
-    }
-    .advantages_boxes>p:nth-of-type(n)::after {
-        content: "";
-        display: block;
-        height: 2px;
-        width: 300px;
-        background-color: blue;
-        position: relative;
-        bottom: -55px;
-    }
-    .advantages_boxes>p:last-of-type::after {
-        content: "";
-        display: block;
-        height: 2px;
-        width: 300px;
-        background-color: green;
-        position: relative;
-        bottom: -55px;
-    }
-    .advantages_boxes .box:first-of-type .box_leftSide::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 300px;
-        background-color: #FB3B64;
-    }
-    .advantages_boxes div:nth-child(2) .box_rightSide::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 300px;
-        background-color: #07ACE6;
-    }
-    .advantages_boxes div:nth-child(3) .box_leftSide::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 300px;
-        background-color: #55DFB4;
-    }
+}
+
+.contact_rightside input {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid grey;
+    margin: 25px 0px;
+}
+
+.contact_rightside label:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_rightside label {
+    color: #08A6E4;
+    font-size: 11px;
+}
+
+.contact_rightside label:last-of-type input {
+    width: 10%;
+}
+
+.contact_rightside label:last-of-type p {
+    width: 90%;
+    color: #707070;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.contact_rightside button {
+    padding: 20px 97px;
+    background-color: #07ACE6;
+    color: white;
+    border-radius: 23px;
+    border: 0px;
+    position: absolute;
+    right: 0px;
+    bottom: -60px;
+}
+
+.contact_rightside label:nth-of-type(3) input {
+    opacity: 0;
+}
+
+.form_agree p::before {
+    content: " ";
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 2px solid red;
+    color: green;
+    position: absolute;
+    left: 0px;
+}
+
+.form_agree input:checked+p::before {
+    border: 2px solid #07ACE6;
+    background-color: #07ACE6;
+    background-image: url(../images/Icon/Check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact_leftside h2 {
+    font-weight: 49px;
+    margin-bottom: 22px;
+    letter-spacing: 3px;
+}
+
+.contact_leftside p {
+    margin-bottom: 42px;
+}
+
+.contact_leftside ul {
+    display: flex;
+    color: #A5A5A5;
+}
+
+.contact_leftside li:first-of-type {
+    padding-right: 15px;
 }
