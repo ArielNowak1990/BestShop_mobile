@@ -8,8 +8,9 @@ header {
     margin: 0 auto;
     width: 100%;
     max-width: 1800px;
-    height: 70px;
+    height: 100vh;
     nav {
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -60,17 +61,20 @@ header {
 .banner_banner {
     display: block;
     width: 98%;
-    height: 50%;
+    height: 70%;
     background-image: url(../images/Background.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    @include desktop (800px) {
+        background-size: contain;
+    }
 }
 
 .banner_slogan {
     margin: 0 auto;
     text-align: center;
-    height: 50%;
+    height: 30%;
     margin-top: 100px;
 }
 

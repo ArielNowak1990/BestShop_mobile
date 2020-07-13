@@ -1,0 +1,446 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+    padding: 0 20px;
+    @include desktop {
+        margin-top: 60px;
+    }
+}
+
+.proof_popular {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 102px;
+    width: 60%;
+    min-width: 300px;
+    @include desktop {
+        flex-direction: row;
+        min-width: 500px;
+    }
+}
+
+.proof_popular h2,
+h2 {
+    font-size: 36px;
+    line-height: 42px;
+    color: black;
+}
+
+.popular .box div {
+    content: " ";
+    display: block;
+    height: 62px;
+    width: 62px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+
+.proof_popular .box:first-of-type div {
+    background-color: #FB3B64;
+}
+
+.proof_popular .box:nth-child(2) div {
+    background-color: #08A6E4;
+}
+
+.proof_popular .box:last-of-type div {
+    background-color: #55DFB4;
+}
+
+.proof_popular .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    @include desktop {
+        margin-bottom: 50px;
+    }
+}
+
+.proof_popular .box img {
+    position: relative;
+    left: 30px;
+}
+
+.proof_popular .box:nth-child(2) img {
+    position: relative;
+    left: 25px;
+    top: 10px;
+}
+
+.proof_popular .box:nth-child(3) img {
+    position: relative;
+    top: 5px;
+}
+
+.proof_popular .box h3 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 6px;
+    font-weight: 800;
+}
+
+.proof_popular .box p {
+    width: 130px;
+    height: 50px;
+    text-align: center;
+}
+
+// TERAZ BEDZIE ADVANTAGES
+.advantages {
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages_boxes {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 105px;
+    margin-bottom: 105px;
+    z-index: 1;
+}
+
+.advantages_boxes .box {
+    width: 90%;
+    z-index: 1;
+    margin-bottom: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+}
+
+.advantages_boxes .box:last-of-type {
+    width: 90%;
+    z-index: 1;
+    margin-bottom: 37px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F7F7F7;
+    border: 0px solid #E8E9ED;
+}
+
+.advantages_boxes .box div {
+    width: 45%;
+}
+
+.box_rightSide,
+.box_leftSide {
+    position: relative;
+}
+
+.box_rightSide img,
+.box_leftSide img {
+    position: relative;
+    z-index: 1;
+}
+
+.before__mac::before {
+    content: " ";
+    display: block;
+    height: 219px;
+    width: 250px;
+    background-color: #FB3B64;
+    border-radius: 25px;
+    position: absolute;
+    right: 100px;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.before__iphone::before {
+    content: " ";
+    display: block;
+    height: 309px;
+    width: 250px;
+    background-color: #07ACE6;
+    border-radius: 45%;
+    position: absolute;
+    right: 180px;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.advantages_boxes .box:first-of-type img {
+    height: 219px;
+    margin: 0 auto;
+}
+
+.advantages_boxes .box:nth-child(2) img {
+    height: 350px;
+}
+
+.advantages_boxes .box:nth-child(3)>div:first-of-type {
+    background-color: #FFFFFF;
+    display: block;
+    height: 370px;
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 60px;
+    border: 1px solid #E8E9ED;
+    padding: 30px
+}
+
+.advantages_boxes .box:nth-child(3)>div:nth-child(2) {
+    background-color: #55DFB4;
+    display: block;
+    height: 370px;
+    width: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advantages_boxes .box:nth-child(3)>div:nth-child(2) img {
+    height: 207px;
+}
+
+.advantages_boxes .box h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    width: 330px;
+}
+
+.advantages_boxes p {
+    width: 416px;
+    padding-bottom: 100px;
+}
+
+.advantages_boxes>p:first-of-type::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 300px;
+    background-color: red;
+    position: relative;
+    bottom: -55px;
+}
+
+.advantages_boxes>p:nth-of-type(n)::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 300px;
+    background-color: blue;
+    position: relative;
+    bottom: -55px;
+}
+
+.advantages_boxes>p:last-of-type::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 300px;
+    background-color: green;
+    position: relative;
+    bottom: -55px;
+}
+
+.advantages_boxes .box:first-of-type .box_leftSide::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 300px;
+    background-color: #FB3B64;
+}
+
+.advantages_boxes div:nth-child(2) .box_rightSide::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 300px;
+    background-color: #07ACE6;
+}
+
+.advantages_boxes div:nth-child(3) .box_leftSide::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 300px;
+    background-color: #55DFB4;
+}
+
+// TERAZ BEDZIE ADVANTAGES na desktop
+@include desktop (1050px) {
+    .advantages {
+        background-color: #F7F7F7;
+        margin: 0 auto;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .advantages_boxes {
+        height: 1190px;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 105px;
+        margin-bottom: 105px;
+        z-index: 1;
+    }
+    .advantages_boxes .box {
+        height: 370px;
+        width: 90%;
+        z-index: 1;
+        margin-bottom: 37px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFFFFF;
+        border: 1px solid #E8E9ED;
+        border-radius: 5px;
+    }
+    .advantages_boxes .box:last-of-type {
+        height: 370px;
+        width: 90%;
+        z-index: 1;
+        margin-bottom: 37px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #F7F7F7;
+        border: 0px solid #E8E9ED;
+    }
+    .advantages_boxes .box div {
+        width: 45%;
+    }
+    .box_rightSide,
+    .box_leftSide {
+        position: relative;
+    }
+    .box_rightSide img,
+    .box_leftSide img {
+        position: relative;
+        z-index: 1;
+    }
+    .before__mac::before {
+        content: " ";
+        display: block;
+        height: 219px;
+        width: 250px;
+        background-color: #FB3B64;
+        border-radius: 25px;
+        position: absolute;
+        right: 100px;
+        transform: rotate(45deg);
+        z-index: 0;
+    }
+    .before__iphone::before {
+        content: " ";
+        display: block;
+        height: 309px;
+        width: 250px;
+        background-color: #07ACE6;
+        border-radius: 45%;
+        position: absolute;
+        right: 180px;
+        transform: rotate(45deg);
+        z-index: 0;
+    }
+    .advantages_boxes .box:first-of-type img {
+        height: 219px;
+        margin: 0 auto;
+    }
+    .advantages_boxes .box:nth-child(2) img {
+        height: 350px;
+    }
+    .advantages_boxes .box:nth-child(3)>div:first-of-type {
+        background-color: #FFFFFF;
+        display: block;
+        height: 370px;
+        width: 620px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 60px;
+        border: 1px solid #E8E9ED;
+        padding: 30px
+    }
+    .advantages_boxes .box:nth-child(3)>div:nth-child(2) {
+        background-color: #55DFB4;
+        display: block;
+        height: 370px;
+        width: 440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .advantages_boxes .box:nth-child(3)>div:nth-child(2) img {
+        height: 207px;
+    }
+    .advantages_boxes .box h3 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        width: 330px;
+    }
+    .advantages_boxes p {
+        width: 416px;
+        padding-bottom: 100px;
+    }
+    .advantages_boxes>p:first-of-type::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 300px;
+        background-color: red;
+        position: relative;
+        bottom: -55px;
+    }
+    .advantages_boxes>p:nth-of-type(n)::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 300px;
+        background-color: blue;
+        position: relative;
+        bottom: -55px;
+    }
+    .advantages_boxes>p:last-of-type::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 300px;
+        background-color: green;
+        position: relative;
+        bottom: -55px;
+    }
+    .advantages_boxes .box:first-of-type .box_leftSide::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 300px;
+        background-color: #FB3B64;
+    }
+    .advantages_boxes div:nth-child(2) .box_rightSide::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 300px;
+        background-color: #07ACE6;
+    }
+    .advantages_boxes div:nth-child(3) .box_leftSide::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 300px;
+        background-color: #55DFB4;
+    }
+}
