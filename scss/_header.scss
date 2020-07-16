@@ -15,7 +15,7 @@ header {
         align-items: center;
         justify-content: space-around;
         border-bottom: 3px solid rgba(128, 126, 126, 0.733);
-        ul {
+        .hidden {
             display: none;
             @include desktop (590px) {
                 display: flex;
@@ -33,6 +33,53 @@ header {
                     margin-left: 60px;
                     padding: 21px;
                     border-bottom: 5px solid rgba(0, 0, 0, 0);
+                }
+            }
+        }
+        .hamburger {
+            &:hover {
+                ul {
+                    display: block;
+                }
+                .close-icon {
+                    display: block;
+                }
+                .hamburger-icon {
+                    display: none;
+                }
+            }
+            .close-icon {
+                &:active {
+                    .hamburger ul {
+                        display: none;
+                    }
+                    .hamburger .close-icon {
+                        display: none;
+                    }
+                    .hamburger .hamburger-icon {
+                        display: block;
+                    }
+                }
+            }
+            .hamburger-icon {
+                display: block;
+            }
+            .close-icon {
+                display: none;
+            }
+            ul {
+                display: none;
+                position: absolute;
+                left: 0%;
+                width: 100%;
+                top: 70px;
+                text-align: center;
+                line-height: 20px;
+                background-color: white;
+                li {
+                    padding: 10px;
+                    font-weight: 700;
+                    font-size: 20px;
                 }
             }
         }
