@@ -49,7 +49,7 @@ header {
                 }
             }
             .close-icon {
-                &:active {
+                &:hover {
                     .hamburger ul {
                         display: none;
                     }
@@ -97,6 +97,7 @@ header {
 }
 
 .banner {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,4 +149,8 @@ header {
     margin-top: 40px;
     padding: 22px 157px;
     border-radius: 40px;
+    @media (max-width: 700px) {
+        padding: 22px;
+        width: 80vw;
+    }
 }
